@@ -1,0 +1,5 @@
+catalogue_host : catalogue.sitaram.icu
+user_host : user.sitaram.icu
+cart_host : cart.sitaram.icu
+shipping_host : shipping.sitaram.icu
+payment_host : payment.sitaram.icu

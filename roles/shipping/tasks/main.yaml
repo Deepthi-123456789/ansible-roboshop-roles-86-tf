@@ -1,0 +1,36 @@
+- name : install mysql libraries
+  ansible.builtin.pip:
+    executable : pip3.9
+    name : "{{ item }}"
+  loop :
+  - pymysql
+  - cryptography
+
+- name : app  setup
+  ansible.builtin.import_role:
+   name : comman 
+   tasks_from : app-setup.yaml
+
+- name : java  setup
+  ansible.builtin.import_role:
+   name : comman 
+   tasks_from : java.yaml
+
+
+- name: import shipping data into mysql
+  community.mysql.mysql_db:
+    state: import
+    name: all
+    login_host: "{{ mysql_host }}"
+    login_user: " {{ mysql_root_user }}"
+    login_password: "{{ mysql_root_user }}"
+    target: "{{ item }}"
+  loop:
+    - /app/db/schema.sql
+    - /app/db/app-user.sql 
+    - /app/db/master-data.sql
+
+- name : app  setup
+  ansible.builtin.import_role:
+   name : comman 
+   tasks_from : system-setup.yaml
