@@ -1,2 +1,2 @@
-redis_host : redis.sitaram.icu
-catalogue_host : catalogue.sitaram.icu
+redis_host : redis-{{ environment }}.sitaram.icu
+catalogue_host : catalogue-{{ environment }}.sitaram.icu

@@ -1,5 +1,5 @@
-cart_host : cart.sitaram.icu
-user_host : user.sitaram.icu
-rabbitmq_host : rabbitmq.sitaram.icu
+cart_host : cart-{{ environment }}.sitaram.icu
+user_host : user-{{ environment }}.sitaram.icu
+rabbitmq_host : rabbitmq-{{ environment }}.sitaram.icu
 rabbitmq_user : roboshop
 rabbitmq_password : roboshop123
