@@ -1,5 +1,5 @@
-catalogue_host : catalogue-{{ environment }}.sitaram.icu
-user_host : user-{{ environment }}.sitaram.icu
-cart_host : cart-{{environment}}.sitaram.icu
-shipping_host : shipping-{{ environment }}.sitaram.icu
-payment_host : payment-{{ environment }}.sitaram.icu
+catalogue_host : catalogue-backend-alb{{ environment }}.sitaram.icu
+user_host : user-backend-alb{{ environment }}.sitaram.icu
+cart_host : cart-backend-alb{{ environment }}.sitaram.icu
+shipping_host : shipping-backend-alb{{ environment }}.sitaram.icu
+payment_host : payment-backend-alb{{ environment }}.sitaram.icu
